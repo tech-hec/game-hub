@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React, { FormEvent, useRef } from "react";
 
 export const GameForm = () => {
@@ -126,9 +127,9 @@ export const GameForm = () => {
         />
       </div>
 
-      <button className="btn btn-primary" type="submit">
+      <Button className="btn btn-primary" type="submit">
         Submit!
-      </button>
+      </Button>
     </form>
   );
 };
