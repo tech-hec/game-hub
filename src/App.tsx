@@ -14,38 +14,37 @@ function App() {
   );
 
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-      templateColumns={{
-        base: "1fr",
-        lg: "200px 1fr",
-      }}
-    >
-      <GridItem area="nav">
-        <NavBar></NavBar>
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="aside" paddingX={5}>
-          <GenreList
+    <>
+      <Grid
+        templateAreas={{
+          base: `"main" "nav"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+        templateColumns={{
+          base: "1fr",
+          lg: "200px 1fr",
+        }}
+      >
+        <Show above="lg">
+          <GridItem area="aside" paddingX={5}>
+            <GenreList
+              selectedGenre={selectedGenre}
+              onSelectGenre={(genre) => setSelectedGenre(genre)}
+            />
+          </GridItem>
+        </Show>
+        <GridItem area="main">
+          <PlatformSelector
+            selectedPlatform={selectedPlatform}
+            onSelectPlatform={(platform) => setSelectedPlatform(platform)}
+          />
+          <GameGrid
+            selectedPlatform={selectedPlatform}
             selectedGenre={selectedGenre}
-            onSelectGenre={(genre) => setSelectedGenre(genre)}
           />
         </GridItem>
-      </Show>
-      <GridItem area="main">
-        <PlatformSelector
-          selectedPlatform={selectedPlatform}
-          onSelectPlatform={(platform) => setSelectedPlatform(platform)}
-        />
-        <GameGrid
-          selectedPlatform={selectedPlatform}
-          selectedGenre={selectedGenre}
-        />
-      </GridItem>
-    </Grid>
+      </Grid>
+    </>
   );
 }
 export default App;
