@@ -35,13 +35,17 @@ app.get("/games", (req, res)=>{
 })
 
 app.post("/games", (req, res)=> {
-    const q = "INSERT INTO games (`name`, `preparation`, `gameplay`, `coverimg`) VALUES (?)"
+    const q = "INSERT INTO games (`name`, `booziness`, `number_of_players`, `best_suited_for`, `duration`, `equipement`, `preparation`, `gameplay`) VALUES (?)"
     //get from user dynamicly
     const values = [
         req.body.name,
-        req.body.prep,
+        req.body.booziness,
+        req.body.number_of_players,
+        req.body.best_suited_for,
+        req.body.duration,
+        req.body.equipement,
+        req.body.preparation,
         req.body.gameplay,
-        req.body.coverimg,
     ]
 
     db.query(q,[values], (err,data) => {

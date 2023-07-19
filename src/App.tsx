@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
-import Games from "./pages/Games";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
