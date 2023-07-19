@@ -65,48 +65,56 @@ export const GameForm = () => {
           onChange={handleChange}
           name="name"
         />
+        <br />
         <input
           type="text"
           placeholder="booziness"
           onChange={handleChange}
           name="booziness"
         />
+        <br />
         <input
           type="number"
           placeholder="number of players"
           onChange={handleChange}
           name="number_of_players"
         />
+        <br />
         <input
           type="text"
           placeholder="best suited for"
           onChange={handleChange}
           name="best_suited_for"
         />
+        <br />
         <input
           type="number"
           placeholder="duration"
           onChange={handleChange}
           name="duration"
         />
+        <br />
         <input
           type="text"
           placeholder="equipement"
           onChange={handleChange}
           name="equipement"
         />
+        <br />
         <input
           type="text"
           placeholder="preparation"
           onChange={handleChange}
           name="preparation"
         />
+        <br />
         <input
           type="text"
           placeholder="gameplay"
           onChange={handleChange}
           name="gameplay"
         />
+        <br />
       </div>
       <form onSubmit={handleSubmit}>
         {/*      <div className="mb-3">
