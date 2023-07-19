@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    // Kjør programmet med: deno task run
+    "run": "deno run -A --unstable main.ts"
+  }
+}
